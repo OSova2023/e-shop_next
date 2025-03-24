@@ -23,11 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} ${inter.className} antialiased`}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} ${inter.className} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

@@ -1,20 +1,16 @@
-import { Button } from "@/components/ui/button";
-import Header from "@/components/shared/header";
-import Footer from "@/components/Footer";
+import ProductList from "@/components/shared/product/product-list";
+import { getLatestProducts } from "@/lib/actions/product.actions";
 
 
 export const metadata = {
   title: 'Главная'
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const latestProducts = await getLatestProducts();
+  console.log(latestProducts);
+
   return (
-    <div className="flex h-screen flex-col">
-      <Header />
-        <main className="flex-1 wrapper">
-          <Button>HOME</Button>
-        </main>
-      <Footer />
-    </div>
+    <ProductList data={latestProducts} title="Новые поступления" limit={4}/>
   );
 }
