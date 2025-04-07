@@ -1,9 +1,9 @@
 import {z} from 'zod'
-import { InsertProductSchema } from '@/lib/validators'
+import { insertProductSchema } from '@/lib/validators'
 
-export type Product = z.infer<typeof InsertProductSchema>&{
+export type Product = z.infer<typeof insertProductSchema>&{
     id:string;
-    createdAt:Date;
     rating:string;
+    createdAt:Date;
 
 }

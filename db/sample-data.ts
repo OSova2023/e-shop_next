@@ -3,7 +3,7 @@ const sampleData = {
       {
         
         name: 'Футболка Sara Sporting Stretch',
-        slug: 'sara-sporting-stretch-shirt',
+        slug: 'sara-sporting-stretch-shirt', // вбили его изначально!
         category: "Мужские рубашки",
         description: 'Классический стиль Sara с современным комфортом',
         images: [
